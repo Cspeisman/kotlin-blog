@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.*
 @RestController
 @RequestMapping("/api/articles")
 class HttpApi(val repository: ArticleRepository, val markdownConverter: MarkdownConverter) {
-
+  
   @GetMapping
   fun index() = repository.findAll();
 
@@ -21,7 +21,7 @@ class HttpApi(val repository: ArticleRepository, val markdownConverter: Markdown
 }
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 class UserController(private val repository: UserRepository) {
 
   @GetMapping("/")
